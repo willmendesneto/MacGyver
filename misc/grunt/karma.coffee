@@ -10,7 +10,7 @@ module.exports = (grunt) ->
     unit:
       background: true
     travis:
-      browsers: ["SL_Chrome", "SL_Firefox", "SL_Safari"]
+      browsers: ["SL_Chrome", "SL_Firefox", "SL_Safari", "SL_IE_10"]
       reporters: ["dots"]
       singleRun: true
     build:

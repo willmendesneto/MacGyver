@@ -6,6 +6,8 @@ env:
   - JOB=unit
   - JOB=e2e BROWSER=chrome
   - JOB=e2e BROWSER=firefox
+  - JOB=e2e BROWSER='internet explorer' OS='Windows 7' VERSION=10
+  - JOB=e2e BROWSER='internet explorer' OS='Windows 7' VERSION=11
   global:
   - LOGS_DIR: /tmp/sauce-build/logs
   - BROWSER_PROVIDER_READY_FILE: /tmp/sauce-connect-ready
