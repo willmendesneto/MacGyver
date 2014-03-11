@@ -32,7 +32,7 @@ describe "Mac Spinner", ->
       element = $compile("<mac-spinner mac-spinner-z-index='9001'></mac-spinner>") $rootScope
       $rootScope.$digest()
 
-      expect(element.css("zIndex")).toBe "9001"
+      expect(+element.css("zIndex")).toBe 9001
 
     it "should update the background color", ->
       element = $compile("<mac-spinner mac-spinner-color='#123123'></mac-spinner>") $rootScope

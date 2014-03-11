@@ -11,7 +11,7 @@ elif [ $JOB = "e2e" ]; then
         --capabilities.build=$TRAVIS_BUILD_NUMBER \
         --browser="$BROWSER" \
         --os="$OS" \
-        --browser-version=$VERSION
+        --browser-version=$BROWSER_VERSION
 else
   echo "Unknown job type. Use either JOB=unit or JOB=e2e"
 fi
