@@ -29,7 +29,7 @@ module.exports = (config) ->
       SL_IE_10:
         base: 'SauceLabs',
         browserName: 'internet explorer',
-        platform: 'Windows 2012',
+        platform: 'Windows 7',
         version: '10'
 
       SL_IE_11:
