@@ -39,7 +39,7 @@ describe "Mac Fileupload", ->
       element       = $compile("<input type='file' mac-upload mac-upload-options='options' />") scope
       scope.$digest()
 
-      expect(element.fileupload("option", "singleFileUploads")).toBe false
+      expect(element.fileupload("option", "singleFileUploads")).toBeFalsy()
 
   describe "Callbacks", ->
     $compile   = null
@@ -61,10 +61,10 @@ describe "Mac Fileupload", ->
       waitsFor ->
         element.fileupload "add", param
         return called
-      , "Submit function should be called", "750"
+      , "Submit function should be called", 750
 
       runs ->
-        expect(called).toBe true
+        expect(called).toBeTruthy()
 
     it "should call success", ->
       param         = {files: [{name: 'test'}]}
@@ -78,10 +78,10 @@ describe "Mac Fileupload", ->
       waitsFor ->
         element.fileupload "send", param
         return called
-      , "Success function should be called", "750"
+      , "Success function should be called", 750
 
       runs ->
-        expect(called).toBe true
+        expect(called).toBeTruthy()
 
     it "should call error", ->
       param       = {files: [{name: 'test'}]}
@@ -96,10 +96,10 @@ describe "Mac Fileupload", ->
       waitsFor ->
         element.fileupload "send", param
         return called
-      , "Error function should be called", "750"
+      , "Error function should be called", 750
 
       runs ->
-        expect(called).toBe true
+        expect(called).toBeTruthy()
 
     it "should call always", ->
       param        = {files: [{name: 'test'}]}
@@ -113,10 +113,10 @@ describe "Mac Fileupload", ->
       waitsFor ->
         element.fileupload "add", param
         return called
-      , "Always function should be called", "750"
+      , "Always function should be called", 750
 
       runs ->
-        expect(called).toBe true
+        expect(called).toBeTruthy()
 
     it "should call progress", ->
       param          = {files: [{name: 'test'}]}
@@ -130,10 +130,10 @@ describe "Mac Fileupload", ->
       waitsFor ->
         element.fileupload "send", param
         return called
-      , "Progress function should be called", "750"
+      , "Progress function should be called", 750
 
       runs ->
-        expect(called).toBe true
+        expect(called).toBeTruthy()
 
   describe "Previews", ->
     $compile   = null
@@ -157,7 +157,7 @@ describe "Mac Fileupload", ->
       waitsFor ->
         element.fileupload "add", param
         return called
-      , "Files should be added to preview array", "750"
+      , "Files should be added to preview array", 750
 
       runs ->
         scope.$digest()
@@ -181,4 +181,4 @@ describe "Mac Fileupload", ->
       event.originalEvent = dataTransfer: {files: [{}]}
       $(document).trigger event
 
-      expect(element.hasClass("droppable")).toBe true
+      expect(element.hasClass("droppable")).toBeTruthy()
