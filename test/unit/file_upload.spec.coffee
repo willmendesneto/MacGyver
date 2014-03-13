@@ -61,7 +61,7 @@ describe "Mac Fileupload", ->
       waitsFor ->
         element.fileupload "add", param
         return called
-      , "Submit function should be called", 750
+      , "Submit function should be called", 2500
 
       runs ->
         expect(called).toBeTruthy()
@@ -78,7 +78,7 @@ describe "Mac Fileupload", ->
       waitsFor ->
         element.fileupload "send", param
         return called
-      , "Success function should be called", 750
+      , "Success function should be called", 2500
 
       runs ->
         expect(called).toBeTruthy()
@@ -96,7 +96,7 @@ describe "Mac Fileupload", ->
       waitsFor ->
         element.fileupload "send", param
         return called
-      , "Error function should be called", 750
+      , "Error function should be called", 2500
 
       runs ->
         expect(called).toBeTruthy()
@@ -113,7 +113,7 @@ describe "Mac Fileupload", ->
       waitsFor ->
         element.fileupload "add", param
         return called
-      , "Always function should be called", 750
+      , "Always function should be called", 2500
 
       runs ->
         expect(called).toBeTruthy()
@@ -130,7 +130,7 @@ describe "Mac Fileupload", ->
       waitsFor ->
         element.fileupload "send", param
         return called
-      , "Progress function should be called", 750
+      , "Progress function should be called", 2500
 
       runs ->
         expect(called).toBeTruthy()
@@ -157,7 +157,7 @@ describe "Mac Fileupload", ->
       waitsFor ->
         element.fileupload "add", param
         return called
-      , "Files should be added to preview array", 750
+      , "Files should be added to preview array", 2500
 
       runs ->
         scope.$digest()
